@@ -65,11 +65,19 @@
   <main class="main-inner">
     <header class="inner-header">
       <h1 clas="inner-header-title">Гостиницы Седоны</h1>
-      <a href=""> <img src="#" alt="Гостиницы">Гостиницы</a>
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link" href="index.html"><img src="#" alt="Главная"></a>
+        </li>
+        <span>></span>
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link">Гостиницы</a>
+        </li>
+      </ul>
     </header>
 
     </section>
-
+    <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get"></form>
     <section>
       <fieldset class="catalog-filter-group">
         <legend class="catalog-filter-title">Инфраструктура</legend>
@@ -99,6 +107,7 @@
     </section>
 
 
+
     <fieldset class="catalog-filter-group">
       <legend class="catalog-filter-title">Тип Жилья</legend>
       <ul class="catalog-filter-list">
@@ -125,25 +134,25 @@
       </ul>
     </fieldset>
 
-    <div>Стоимость, ₽:</div>
-    <table border="1">
-      <tr>
-        <td>0 от</td>
-        <td>9000 до</td>
-      </tr>
-    </table>
 
+
+    <div>Стоимость, ₽:</div>
+    <input type="number" name="money" min="0"  max="9000" value="0" step="01" placeholder="от" title="от">
+    <input type="number" name="money" min="0"  max="9000" value="9000" step="01" placeholder="до" title="до">
     <input type="range" min="0" max="9000" step="1" value="7000">
-    <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-      <button class="button" type="submit">Применить</button>
-      <button class="no-border-button " type="reset"> Сбросить</button>
+
+    <button class="button" type="submit">Применить</button>
+    <button class="no-border-button " type="reset"> Сбросить</button>
     </form>
+
     <h2>Найдено гостиниц:38</h2>
+    <form action="https://echo.htmlacademy.ru/" method="post">
     <select class="select-control" aria-label="Сортировка">
       <option value="popular"> Сначала популярное </option>
       <option value="cheap">Сначала дешевле </option>
       <option value="expensive"> Сначала дороже </option>
     </select>
+  </form>
     <a href="#" class="button button-light">
       <span class="visually-hidden">Показать список</span>
     </a>
@@ -254,7 +263,7 @@
     </ul>
 
     <span class="number-of-hotels"> Гостиниц на странице: </span>
-    <select class="select-control-pages" aria-label="Сортировка" >
+    <select class="select-control-pages" aria-label="Сортировка">
       <option value="one"> 1 </option>
       <option value="two"> 2 </option>
       <option value="trhee"> 3 </option>
@@ -305,3 +314,10 @@
     </section>
   </footer>
 </body>
+
+
+
+
+
+
+
